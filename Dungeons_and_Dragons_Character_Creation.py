@@ -150,8 +150,7 @@ MartialMelee = ["Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halbe
 SimpleWeapons = ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling"]
 SimpleMelee = ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear"]
 
-# Abomination Currently Removed
-Race = ["Aasimar", "Bugbear", "Dragonborn", "Dryad", "Dwarf", "Elf", "Firbolg", "Genasi", "Gith", "Gnome", "Goblin", "Goliath", "Hobgoblin", "Half-Elf", "Halfling", "Half-Orc", "Human", "Juiblexian", "Kender", "Kenku", "Kobold", "Lizardfolk", "Mousefolk", "Orc", "Succubus", "Tabaxi", "Tiefling", "Tortle", "Triton", "Yuan-Ti Pureblood"]
+Race = ["Aasimar", "Bugbear", "Dragonborn", "Dwarf", "Elf", "Firbolg", "Genasi", "Gith", "Gnome", "Goblin", "Goliath", "Hobgoblin", "Half-Elf", "Halfling", "Half-Orc", "Human", "Juiblexian", "Kender", "Kenku", "Kobold", "Lizardfolk", "Mousefolk", "Orc", "Succubus", "Tabaxi", "Tiefling", "Tortle", "Triton", "Yuan-Ti Pureblood"]
 Race = random.choice(Race)
 
 if Race == "Aasimar":
@@ -250,22 +249,6 @@ if Race == "Dragonborn":
         Resistances.extend(["Cold"])
         Traits.extend(["Cold Breath"])
 
-if Race == "Dryad": # Extra Race I found https://www.dandwiki.com/wiki/Dryad_(5e_Race)
-    Subrace = ["Watcher"]  # Leaving this as a list in case I can find a balanced version of the Guardian subclass
-    Subrace = random.choice(Subrace)
-    DEX = StatIncrease(DEX, 1)
-    WIS = StatIncrease(WIS, 2)
-    Age = "N/A"
-    SizeMod = Normal(2,6)
-    Height = 5 * 12 + 5 + SizeMod
-    Weight = 40 + SizeMod * Normal(2,6)
-    Eyes = "Changes with the Seasons"
-    Skin = ["Orange", "Green", "Yellowish Green"]
-    Skin = random.choice(Skin)
-    Hair = "Leaves that Change with the Seasons"
-    Speed = 30
-    Traits.extend(["Barkskin", "Forest Blend", "Photosynthesis", "Tree Stride", "Nature Whisperer"])
-    Vulnerabilities.extend(["Fire"])
     
 if Race == "Dwarf":
     Subrace = ["Duergar", "Hill", "Mountain"]
