@@ -1,0 +1,149 @@
+{
+	"files": [
+		{
+			"path": "Dungeons_and_Dragons_Character_Creation.py",
+			"bookmarks": [
+				{
+					"line": 142,
+					"column": 0,
+					"label": "Aasimar"
+				},
+				{
+					"line": 173,
+					"column": 0,
+					"label": "Bugbear"
+				},
+				{
+					"line": 187,
+					"column": 0,
+					"label": "Dragonborn"
+				},
+				{
+					"line": 242,
+					"column": 0,
+					"label": "Dwarf"
+				},
+				{
+					"line": 284,
+					"column": 0,
+					"label": "Elf"
+				},
+				{
+					"line": 360,
+					"column": 0,
+					"label": "Firebolg"
+				},
+				{
+					"line": 376,
+					"column": 0,
+					"label": "Genasi"
+				},
+				{
+					"line": 424,
+					"column": 0,
+					"label": "Gith"
+				},
+				{
+					"line": 456,
+					"column": 19,
+					"label": "Gnome"
+				},
+				{
+					"line": 488,
+					"column": 20,
+					"label": "Goblin"
+				},
+				{
+					"line": 503,
+					"column": 21,
+					"label": "Goliath"
+				},
+				{
+					"line": 519,
+					"column": 23,
+					"label": "Hobgoblin"
+				},
+				{
+					"line": 535,
+					"column": 22,
+					"label": "Half-Elf"
+				},
+				{
+					"line": 576,
+					"column": 22,
+					"label": "Halfing"
+				},
+				{
+					"line": 609,
+					"column": 0,
+					"label": "Half-Orc"
+				},
+				{
+					"line": 625,
+					"column": 0,
+					"label": "Human"
+				},
+				{
+					"line": 682,
+					"column": 0,
+					"label": "Juiblexian"
+				},
+				{
+					"line": 712,
+					"column": 0,
+					"label": "Kender"
+				},
+				{
+					"line": 730,
+					"column": 3,
+					"label": "Kenku"
+				},
+				{
+					"line": 745,
+					"column": 1,
+					"label": "Kobold"
+				},
+				{
+					"line": 760,
+					"column": 0,
+					"label": "Lizardfolk"
+				},
+				{
+					"line": 778,
+					"column": 1,
+					"label": "Mousefolk"
+				},
+				{
+					"line": 793,
+					"column": 1,
+					"label": "Orc"
+				},
+				{
+					"line": 809,
+					"column": 3,
+					"label": "Tabaxi"
+				},
+				{
+					"line": 825,
+					"column": 5,
+					"label": "Tiefling"
+				},
+				{
+					"line": 882,
+					"column": 5,
+					"label": "Tortle"
+				},
+				{
+					"line": 898,
+					"column": 8,
+					"label": "Triton"
+				},
+				{
+					"line": 915,
+					"column": 3,
+					"label": "Yuan-Ti Pureblood"
+				}
+			]
+		}
+	]
+}
