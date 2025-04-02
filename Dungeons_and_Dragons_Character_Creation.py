@@ -695,21 +695,6 @@ if Race == "Lizardfolk":
     LizardfolkSkills :list[str] = ["Animal Handling", "Nature", "Perception", "Stealth", "Survival"]
     SkillProficiencies.extend(random.sample(LizardfolkSkills, 2))
     
-if Race == "Mousefolk":
-    DEX :int = StatIncrease(DEX, 2)
-    CHA :int = StatIncrease(CHA, 1)
-    Age :int = Normal(10,45)
-    SizeMod :int = Normal(2,8)
-    Height :int = 2 * 12 + 11 + SizeMod
-    Weight :int = 40 + SizeMod
-    Eyes :list[str] = ["Pink", "Black"]
-    Eyes :str = random.choice(Eyes)
-    Skin :str= "Pink"
-    Hair :list[str] = ["Beige Fur", "Black Fur", "Chocolate Fur", "Coffee Fur", "Cream Fur", "Ivory Fur", "Lilac Fur", "Silver Fur", "White Fur", "Tan Fur"]
-    Hair :str = random.choice(Hair)
-    Speed :int = 25
-    Traits.extend(["Darkvision (60ft)", "Light Sleeper", "Mouse's Agility", "Mousefolk Senses", "Mouse's Survival"]) # I will be ediditing some of these for my campaign as they aren't well balanced
-    
 if Race == "Orc":
     STR :int = StatIncrease(STR, 2)
     CON :int = StatIncrease(CON, 1)
@@ -725,23 +710,6 @@ if Race == "Orc":
     Speed :int = 30
     Traits.extend(["Darkvision (60ft)", "Aggressive", "Powerful Build"])
     SkillProficiencies.extend(["Intimidation"])
-    
-if Race == "Succubus": # Extra class I found https://www.dndbeyond.com/races/1524-succubus
-    CHA :int = StatIncrease(CHA, 1)
-    Age :int = Normal(20,1000)
-    SizeMod :int = Normal(2,20)
-    Height :int = 4 * 12 + 8 + SizeMod
-    Weight :int = 110 + SizeMod * Normal(2,8)
-    Eyes :list[str] = ["Glowing Red", "Glowing Blue", "Glowing Brown", "Glowing Green"]
-    Eyes :str = random.choice(Eyes)
-    Skin :list[str] = ["Tan", "Olive", "White"]
-    Skin :str= random.choice(Skin)
-    Hair :list[str] = ["Black", "Red"]
-    Hair :str = random.choice(Hair)
-    Speed :int = 30
-    SkillProficiencies.extend(["Persuasion"])
-    Traits.extend(["Charm", "Darkvision (60ft)", "Fiendish Nature", "Shapechanger", "Small Wings"]) # I might switch some of these around with playtesting
-    Vulnerabilities.extend(["Radiant"])
 
 if Race == "Tabaxi":
     DEX :int = StatIncrease(DEX, 2)
