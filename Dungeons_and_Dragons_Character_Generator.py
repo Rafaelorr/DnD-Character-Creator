@@ -695,21 +695,6 @@ if Race == "Lizardfolk":
     LizardfolkSkills :list[str] = ["Animal Handling", "Nature", "Perception", "Stealth", "Survival"]
     SkillProficiencies.extend(random.sample(LizardfolkSkills, 2))
     
-if Race == "Mousefolk":
-    DEX :int = StatIncrease(DEX, 2)
-    CHA :int = StatIncrease(CHA, 1)
-    Age :int = Normal(10,45)
-    SizeMod :int = Normal(2,8)
-    Height :int = 2 * 12 + 11 + SizeMod
-    Weight :int = 40 + SizeMod
-    Eyes :list[str] = ["Pink", "Black"]
-    Eyes :str = random.choice(Eyes)
-    Skin :str= "Pink"
-    Hair :list[str] = ["Beige Fur", "Black Fur", "Chocolate Fur", "Coffee Fur", "Cream Fur", "Ivory Fur", "Lilac Fur", "Silver Fur", "White Fur", "Tan Fur"]
-    Hair :str = random.choice(Hair)
-    Speed :int = 25
-    Traits.extend(["Darkvision (60ft)", "Light Sleeper", "Mouse's Agility", "Mousefolk Senses", "Mouse's Survival"])
-    
 if Race == "Orc":
     STR :int = StatIncrease(STR, 2)
     CON :int = StatIncrease(CON, 1)
