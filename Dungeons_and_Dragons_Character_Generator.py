@@ -23,7 +23,7 @@ Created on Tuesday April 30 2019
 import random
 import collections
 
-def Normal(Min, Max): # Not exactly sure how this one is working, but it gives a more realistic result for age, height and weight
+def Normal(Min, Max): # it gives a more realistic result for age, height and weight
     r = round(random.triangular(low = Min, high = Max))# Round gives us a whole number for a character's age
     return r
 
@@ -31,7 +31,7 @@ def HitPoints(MaxDice):
     HITPOINTS :int = 0
     if Level == 1:
         HITPOINTS :int = MaxDice + CONMOD 
-        if HITPOINTS <= MaxDice:  # This makes it so that the minimum HP is your HP die but you can start stronger if it "rolls well"
+        if HITPOINTS <= MaxDice:  # This makes it so that the minimum HP is your HP die but you can start stronger
             HITPOINTS :int = MaxDice
         return(HITPOINTS)
     else:
@@ -41,7 +41,7 @@ def HitPoints(MaxDice):
             ADDITION = random.randint(1,MaxDice)
             HITPOINTS :int = HITPOINTS + ADDITION
             n += 1
-    if HITPOINTS <= MaxDice + (Level - 1):  # This makes it so the minimum HP increase is 1, I don't like to play with weakening characters
+    if HITPOINTS <= MaxDice + (Level - 1):  # This makes it so the minimum HP increase is 1
         HITPOINTS :int = MaxDice + (Level - 1)
     return(HITPOINTS)
 
@@ -265,7 +265,7 @@ if Race == "Elf":
     if Subrace == "Eladrin" or Subrace == "Drow":
         CHA :int = StatIncrease(CHA, 1)
     if Subrace == "High":
-        INT :int =StatIncrease(INT, 1)
+        INT :int = StatIncrease(INT, 1)
     if Subrace == "Sea" or Subrace == "Shadar-Kai":
         CON :int = StatIncrease(CON, 1)
     if Subrace == "Wood":
@@ -351,7 +351,7 @@ if Race == "Genasi":
     if Subrace == "Earth":
         STR :int = StatIncrease(STR, 1)
     if Subrace == "Fire":
-        INT :int =StatIncrease(INT, 1)
+        INT :int = StatIncrease(INT, 1)
     if Subrace == "Water":
         WIS :int = StatIncrease(WIS, 1)
     Age :int = Normal(20,100)
@@ -389,7 +389,7 @@ if Race == "Genasi":
 if Race == "Gith":
     Subrace :list[str] = ["Githyanki", "Githzerai"]
     Subrace :str = random.choice(Subrace)
-    INT :int =StatIncrease(INT, 1)
+    INT :int = StatIncrease(INT, 1)
     if Subrace == "Githyanki":
         STR :int = StatIncrease(STR, 2)
     if Subrace == "Githzerai":
@@ -418,7 +418,7 @@ if Race == "Gith":
 if Race == "Gnome":
     Subrace :list[str] = ["Deep", "Forest", "Rock"]
     Subrace :str = random.choice(Subrace)
-    INT :int =StatIncrease(INT, 2)
+    INT :int = StatIncrease(INT, 2)
     if Subrace == "Deep" or Subrace == "Forest":
         DEX :int = StatIncrease(DEX, 1)
     if Subrace == "Rock":
@@ -476,7 +476,7 @@ if Race == "Goliath":
     
 if Race == "Hobgoblin":
     CON :int = StatIncrease(CON, 2)
-    INT :int =StatIncrease(INT, 1)
+    INT :int = StatIncrease(INT, 1)
     Age :int = Normal(20,80)
     SizeMod :int = Normal(2,16)
     Height :int = 5 * 12 + 6 + SizeMod
@@ -563,13 +563,13 @@ if Race == "Half-Orc":
     Traits.extend(["Darkvision (60ft)", "Relentless Endurance", "Savage Attacks"])
 
 if Race == "Human": # I have not accounted for the different Human ethnicities
-    Subrace :list[str] = ["Stat Increase", "Variant", "Variant"] # Two chances for variant, just to spice things up
+    Subrace :list[str] = ["Stat Increase", "Variant"]
     Subrace :str = random.choice(Subrace)
     if Subrace == "Stat Increase":
         STR :int = StatIncrease(STR, 1)
         DEX :int = StatIncrease(DEX, 1)
         CON :int = StatIncrease(CON, 1)
-        INT :int =StatIncrease(INT, 1)
+        INT :int = StatIncrease(INT, 1)
         WIS :int = StatIncrease(WIS, 1)
         CHA :int = StatIncrease(CHA, 1)
     if Subrace == "Variant":
@@ -581,7 +581,7 @@ if Race == "Human": # I have not accounted for the different Human ethnicities
         if "CON" in Choices:
             CON :int = StatIncrease(CON, 1)
         if "INT" in Choices:
-            INT :int =StatIncrease(INT, 1)
+            INT :int = StatIncrease(INT, 1)
         if "WIS" in Choices:
             WIS :int = StatIncrease(WIS, 1)
         if "CHA" in Choices:
@@ -610,7 +610,7 @@ if Race == "Juiblexian":
     if Subrace == "Blasphemy":
         CHA :int = StatIncrease(CHA, 1)
     if Subrace == "Mnemonic":
-        INT :int =StatIncrease(INT, 1)
+        INT :int = StatIncrease(INT, 1)
     Age :int = Normal(100,200)
     SizeMod :int = Normal(2,20)
     Height :int = 4 * 12 + 10 + SizeMod
@@ -708,12 +708,12 @@ if Race == "Mousefolk":
     Hair :list[str] = ["Beige Fur", "Black Fur", "Chocolate Fur", "Coffee Fur", "Cream Fur", "Ivory Fur", "Lilac Fur", "Silver Fur", "White Fur", "Tan Fur"]
     Hair :str = random.choice(Hair)
     Speed :int = 25
-    Traits.extend(["Darkvision (60ft)", "Light Sleeper", "Mouse's Agility", "Mousefolk Senses", "Mouse's Survival"]) # I will be ediditing some of these for my campaign as they aren't well balanced
+    Traits.extend(["Darkvision (60ft)", "Light Sleeper", "Mouse's Agility", "Mousefolk Senses", "Mouse's Survival"])
     
 if Race == "Orc":
     STR :int = StatIncrease(STR, 2)
     CON :int = StatIncrease(CON, 1)
-    INT :int =StatDecrease(INT, 2)
+    INT :int = StatDecrease(INT, 2)
     Age :int = Normal(12,30)
     SizeMod :int = Normal(2,16)
     Height :int = 5 * 12 + 4 + SizeMod
@@ -726,22 +726,6 @@ if Race == "Orc":
     Traits.extend(["Darkvision (60ft)", "Aggressive", "Powerful Build"])
     SkillProficiencies.extend(["Intimidation"])
     
-if Race == "Succubus": # Extra class I found https://www.dndbeyond.com/races/1524-succubus
-    CHA :int = StatIncrease(CHA, 1)
-    Age :int = Normal(20,1000)
-    SizeMod :int = Normal(2,20)
-    Height :int = 4 * 12 + 8 + SizeMod
-    Weight :int = 110 + SizeMod * Normal(2,8)
-    Eyes :list[str] = ["Glowing Red", "Glowing Blue", "Glowing Brown", "Glowing Green"]
-    Eyes :str = random.choice(Eyes)
-    Skin :list[str] = ["Tan", "Olive", "White"]
-    Skin :str= random.choice(Skin)
-    Hair :list[str] = ["Black", "Red"]
-    Hair :str = random.choice(Hair)
-    Speed :int = 30
-    SkillProficiencies.extend(["Persuasion"])
-    Traits.extend(["Charm", "Darkvision (60ft)", "Fiendish Nature", "Shapechanger", "Small Wings"]) # I might switch some of these around with playtesting
-    Vulnerabilities.extend(["Radiant"])
 
 if Race == "Tabaxi":
     DEX :int = StatIncrease(DEX, 2)
@@ -764,17 +748,17 @@ if Race == "Tiefling":
     Subrace :str = random.choice(Subrace)
     if Subrace == "Asmodeus" or Subrace == "Baalzebul" or Subrace == "Devil's Tongue" or Subrace == "Hellfire" or Subrace == "Mammon" or Subrace == "Mephistopheles":
         CHA :int = StatIncrease(CHA, 2)
-        INT :int =StatIncrease(INT, 1)
+        INT :int = StatIncrease(INT, 1)
     if Subrace == "Dispater" or Subrace == "Glasya":
         CHA :int = StatIncrease(CHA, 2)
         DEX :int = StatIncrease(DEX, 1)
     if Subrace == "Feral":
         DEX :int = StatIncrease(DEX, 2)
-        INT :int =StatIncrease(INT, 1)
+        INT :int = StatIncrease(INT, 1)
     if Subrace == "Fierna":
         CHA :int = StatIncrease(CHA, 2)
         WIS :int = StatIncrease(WIS, 1)
-    if Subrace == "Livistus":
+    if Subrace == "Levistus":
         CHA :int = StatIncrease(CHA, 2)
         CON :int = StatIncrease(CON, 1)
     if Subrace == "Zariel":
@@ -851,7 +835,7 @@ if Race == "Triton":
     
 if Race == "Yuan-Ti Pureblood":
     CHA :int = StatIncrease(CHA, 2)
-    INT :int =StatIncrease(INT, 1)
+    INT :int = StatIncrease(INT, 1)
     Age :int = Normal(20,60)
     SizeMod :int = Normal(2,20)
     Height :int = 4 * 12 + 8 + SizeMod
@@ -866,7 +850,7 @@ if Race == "Yuan-Ti Pureblood":
     Immunities.extend(["Poison", "Poisoned"])
     Traits.extend(["Darkvision (60ft)", "Innate Spellcasting", "Magic Resistance"])
     
-STRMOD :int =STATMOD(STR)
+STRMOD :int = STATMOD(STR)
 DEXMOD :int = STATMOD(DEX)
 CONMOD :int = STATMOD(CON)
 INTMOD :int = STATMOD(INT)
@@ -874,14 +858,6 @@ WISMOD :int = STATMOD(WIS)
 CHAMOD :int = STATMOD(CHA)
 
 Class :str = random.choice(["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"])
-
-# =============================================================================
-# if Class == "Alchemist":
-# =============================================================================
-    
-# =============================================================================
-# if Class == "Artificer":
-# =============================================================================
 
 if Class == "Barbarian":
     if Level >= 3:
@@ -905,15 +881,7 @@ if Class == "Bard":
     SavingThrowProficiencies.extend(["DEX", "CHA"])
     SkillProficiencies.extend(random.sample(Skills, 3))
     Equipment.extend([random.choice(["Rapier", "Longsword", random.choice(SimpleWeapons)]), random.choice(["Diplomat's Pack", "Entertainer's Pack"]), random.choice(["Lute", random.choice(MusicalInstruments)]), "Leather Armour", "Dagger"])
-    
-# =============================================================================
-# if Class == "Blood Hunter":
-# =============================================================================
 
-# =============================================================================
-# if Class == "Cardcaster":
-# =============================================================================
-    
 if Class == "Cleric":
     Subclass :list[str]  = ["Arcana Domain", "Ambition Domain", "City Domain", "Death Domain", "Forge Domain", "Grave Domain", "Knowledge Domain", "Life Domain", "Light Domain", "Nature Domain", "Order Domain", "Protection Domain", "Solidarity Domain", "Strength Domain", "Tempest Domain", "Trickery Domain", "War Domain", "Zeal Domain"]
     Subclass :str = random.choice(Subclass)
@@ -931,11 +899,7 @@ if Class == "Cleric":
     else:
         Equipment.extend([random.choice(["Scale Mail", "Leather Armour"])])
     Equipment.extend([random.choice(["Light Crossbow with 20 Bolts", random.choice(SimpleWeapons)]), random.choice(["Priest's Pack", "Explorer's Pack"]), "Shield", "Holy Symbol"])
-    
-# =============================================================================
-# if Class == "Diabolist":
-# =============================================================================
-    
+
 if Class == "Druid":
     if Level >= 2:
         Subclass :list[str]  = ["Circle of Dreams", "Circle of the Land", "Circle of the Moon", "Circle of the Shepherd", "Circle of Spores", "Circle of Twilight"]
@@ -950,10 +914,6 @@ if Class == "Druid":
     SavingThrowProficiencies.extend(["INT", "WIS"])
     SkillProficiencies.extend(random.sample(["Arcana", "Animal Handling", "Insight", "Medicine", "Nature", "Perception", "Religion", "Survival"], 2))
     Equipment.extend([random.choice(["Wooden Shield", random.choice(SimpleWeapons)]), random.choice(["Scimitar", random.choice(SimpleMelee)]), "Leather Armour", "Explorer's Pack", "Druidic Focus"])
-    
-# =============================================================================
-# if Class == "Feywalker":
-# =============================================================================
     
 if Class == "Fighter":
     FightingStyle = ["Archery", "Defense", "Dueling", "Great Weapon Fighting", "Protection", "Two-Weapon Fighting"]
@@ -984,15 +944,7 @@ if Class == "Monk":
     SavingThrowProficiencies.extend(["STR", "DEX"])
     SkillProficiencies.extend(random.sample(["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"], 2))
     Equipment.extend([random.choice(["Shortsword", random.choice(SimpleWeapons)]), random.choice(["Dungeoneer's Pack", "Explorer's Pack"]), "10 Darts"])
-    
-# =============================================================================
-# if Class == "Morph":
-# =============================================================================
-    
-# =============================================================================
-# if Class == "Occultist":
-# =============================================================================
-    
+
 if Class == "Paladin":
     if Level >= 2:
         FightingStyle = ["Defense", "Dueling", "Great Weapon Fighting", "Protection"]
@@ -1072,7 +1024,6 @@ if Class == "Wizard":
     SkillProficiencies.extend(random.sample(["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"], 2))
     Equipment.extend([random.choice(["Quarterstaff", "Dagger"]), random.choice(["Component Pouch", "Arcane Focus"]), random.choice(["Scholar's Pack", "Explorer's Pack"]), "Spellbook"])
 
-# Currently Removed: "Dissenter"
 Background = ["Acolyte", "Anthropologist", "Archaeologist", "Black Fist Double Agent", "Caravan Specialist", "Charlatan", "City Watch", "Clan Crafter", "Cloistered Scholar", "Courtier", "Criminal", "Dragon Casualty", "Earthspur Miner", "Entertainer", "Faction Agent", "Far Traveller", "Folk Hero", "Gate Urchin", "Guild Artisan", "Harborfolk", "Haunted One", "Hermit", "Hillsfar Merchant", "Hillsfar Smuggler", "House Agent", "Inheritor", "Initiate", "Inquisitor", "Iron Route Bandit", "Knight of the Order", "Mercenary Veteran", "Mulmaster Aristocrat", "Noble", "Outlander", "Phlan Insurgent", "Phlan Refugee", "Sage", "Sailor", "Secret Identity", "Shade Fanatic", "Soldier", "Stojanow Prisoner", "Ticklebelly Nomad", "Trade Sheriff", "Urban Bounty Hunter", "Urchin", "Uthgardt Tribe Member", "Vizier", "Waterdhavian Noble"]
 Background = random.choice(Background)
 
@@ -1139,11 +1090,6 @@ if Background == "Criminal":
     Background = "Criminal " + random.choice(Specialty)
     SkillProficiencies.extend(["Deception", "Stealth"])
     ToolProficiencies.extend([random.choice(GamingSets), "Thieves' Tools"])
-
-# =============================================================================
-# if Background == "Dissenter":  # Don't know what Dissenters get for proficiencies or equipment
-#     SkillProficiencies.extend([])
-# =============================================================================
     
 if Background == "Dragon Casualty": # Tool proficiency is based on origin
     Origin = random.choice(["Dockworker/Fisherman", "Tradesperson/Merchant", "Black Fist Soldier", "Adventurer", "Entertainer", "Scholar/Healer", "Criminal", "Unskilled Labourer"])
@@ -1172,7 +1118,7 @@ if Background == "Earthspur Miner":
     Equipment.extend([random.choice(["Shovel", "Miner's Pick"]), "Block and Tackle", "Climber's Kit", "Set of Common Clothes", "5 gp"])
     
 if Background == "Entertainer":
-    Routine = random.sample(["an Actor", "a Dancer", "a Fire-Eater", "a Gladiator", "a Jester", "a Juggler", "an Instrumentalist", "a Poet", "a Singer", "a Storyteller", "a Tumbler"], 3) # The handbook says up to 3 routines, going with 3 to spice things up. Gladiator is also included in here for fun
+    Routine = random.sample(["an Actor", "a Dancer", "a Fire-Eater", "a Gladiator", "a Jester", "a Juggler", "an Instrumentalist", "a Poet", "a Singer", "a Storyteller", "a Tumbler"], 3) # The handbook says up to 3 routines, going with 3 to spice things up.
     Background = "Entertainer who is " + ", and ".join(Routine)
     SkillProficiencies.extend(["Acrobatics", "Performance"])
     EntertainerMusicalInstrument = random.choice(MusicalInstruments)  # Introducing a temporary variable so the same instrument will be included in the equipment and proficiencies
@@ -1371,7 +1317,7 @@ if Background == "Sailor":
     ToolProficiencies.extend(["Navigator's Tools", "Water Vehicles"])
     Equipment.extend(["Belaying Pin (Club)", "50 ft of Silk Rope", "Lucky Charm (Trinket)", "Set of Common Clothes", "10 gp"])
     
-if Background == "Secret Identity": # Has to be non human
+if Background == "Secret Identity" and Race != "Human": # Has to be non human
     SkillProficiencies.extend(["Deception", "Stealth"])
     ToolProficiencies.extend(["Disguise Kit", "Forgery Kit"])
     Equipment.extend(["Disguise Kit", "Forgery Kit", "Set of Common Clothes", "5 gp"])
