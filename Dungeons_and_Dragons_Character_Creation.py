@@ -929,12 +929,31 @@ INTMOD :int = STATMOD(INT)
 WISMOD :int = STATMOD(WIS)
 CHAMOD :int = STATMOD(CHA)
 
-Class :str = random.choice(["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"])
+Class :str = input("""What's your class: 
+                   Barbarian
+                   Bard
+                   Cleric
+                   Druid
+                   Fighter
+                   Mink
+                   Paladin
+                   Ranger
+                   Rogue
+                   Sorcerer
+                   Warlock
+                   Wizard
+                   """)
 
 if Class == "Barbarian":
     if Level >= 3:
-        Subclass :list[str]  = ["Path of the Ancestral Guardian", "Path of the Battlerager", "Path of the Berserker", "Path of the Storm Herald", "Path of the Totem Warrior", "Path of the Zealot"]
-        Subclass :str = random.choice(Subclass)
+        Subclass :str = input("""What's your Barbarian's Path:
+                              Path of the Ancestral Guardian
+                              Path of the Battlerager
+                              Path of the Berserker
+                              Path of the Storm Herald
+                              Path of the Totem Warrior
+                              Path of the Zealot
+                              """)
     HP :int = HP + HitPoints(12)
     ArmourProficiencies.extend(["Light Armour", "Medium Armour", "Shields"])
     WeaponProficiencies.extend(["Simple Weapons", "Martial Weapons"])
@@ -944,8 +963,14 @@ if Class == "Barbarian":
     
 if Class == "Bard":
     if Level >= 3:
-        Subclass :list[str]  = ["College of Glamour", "College of Lore", "College of Satire", "College of Swords", "College of Valor", "College of Whispers"]
-        Subclass :str = random.choice(Subclass)
+        Subclass :str = input("""What's your Bard's College:
+                              College of Glamour
+                              College of Lore
+                              College of Satire
+                              College of Swords
+                              College of Valor
+                              College of Whispers
+                              """)
     HP :int = HP + HitPoints(8)
     ArmourProficiencies.extend(["Light Armour"])
     WeaponProficiencies.extend(["Simple Weapons", "Hand Crossbows", "Longswords", "Rapiers", "Shortswords"])
@@ -955,8 +980,26 @@ if Class == "Bard":
     Equipment.extend([random.choice(["Rapier", "Longsword", random.choice(SimpleWeapons)]), random.choice(["Diplomat's Pack", "Entertainer's Pack"]), random.choice(["Lute", random.choice(MusicalInstruments)]), "Leather Armour", "Dagger"])
     
 if Class == "Cleric":
-    Subclass :list[str]  = ["Arcana Domain", "Ambition Domain", "City Domain", "Death Domain", "Forge Domain", "Grave Domain", "Knowledge Domain", "Life Domain", "Light Domain", "Nature Domain", "Order Domain", "Protection Domain", "Solidarity Domain", "Strength Domain", "Tempest Domain", "Trickery Domain", "War Domain", "Zeal Domain"]
-    Subclass :str = random.choice(Subclass)
+    Subclass :str = input("""What's your Cleric's domain:
+                          Arcana Domain
+                          Ambition Domain
+                          City Domain
+                          Death Domain
+                          Forge Domain
+                          Grave Domain
+                          Knowledge Domain
+                          Life Domain
+                          Light Domain
+                          Nature Domain
+                          Order Domain
+                          Protection Domain
+                          Solidarity Domain
+                          Strength Domain
+                          Tempest Domain
+                          Trickery Domain
+                          War Domain
+                          Zeal Domain
+                          """)
     HP :int = HP + HitPoints(8)
     ArmourProficiencies.extend(["Light Armour", "Medium Armour", "Shields"])
     WeaponProficiencies.extend(["Simple Weapons"])
@@ -974,10 +1017,25 @@ if Class == "Cleric":
   
 if Class == "Druid":
     if Level >= 2:
-        Subclass :list[str]  = ["Circle of Dreams", "Circle of the Land", "Circle of the Moon", "Circle of the Shepherd", "Circle of Spores", "Circle of Twilight"]
-        Subclass :str = random.choice(Subclass)
+        Subclass :str = input("""What's your Druid's Circle:
+                              Circle of Dreams
+                              Circle of the Land
+                              Circle of the Moon
+                              Circle of the Shepherd
+                              Circle of Spores
+                              Circle of Twilight
+                              """)
         if Subclass == "Circle of the Land":
-            Land :int = random.choice(["(Arctic)", "(Coast)", "(Desert)", "(Forest)", "(Grassland)", "(Mountain)", "(Swamp)", "(Underdark)"])
+            Land :str = input("""What's your Circle of the Land Druid's land:
+                              (Arctic)
+                              (Coast)
+                              (Desert)
+                              (Forest)
+                              (Grassland)
+                              (Mountain)
+                              (Swamp)
+                              (Underdark)
+                              """)
             Subclass :str = "Circle of the Land " + Land
     HP :int = HP + HitPoints(8)
     ArmourProficiencies.extend(["Light Armour", "Medium Armour", "Shields"])
@@ -988,11 +1046,27 @@ if Class == "Druid":
     Equipment.extend([random.choice(["Wooden Shield", random.choice(SimpleWeapons)]), random.choice(["Scimitar", random.choice(SimpleMelee)]), "Leather Armour", "Explorer's Pack", "Druidic Focus"])
    
 if Class == "Fighter":
-    FightingStyle = ["Archery", "Defense", "Dueling", "Great Weapon Fighting", "Protection", "Two-Weapon Fighting"]
-    FightingStyle = random.choice(FightingStyle)
+    FightingStyle :str = input("""What's your Fighter's fighting style:
+                          Archery
+                          Defense
+                          Dueling
+                          Great Weapon Fighting
+                          Protection
+                          Two-Weapon Fighting
+                          """)
     if Level >= 3:
-        Subclass :list[str]  = ["Arcane Archer", "Battle Master", "Brute", "Cavalier", "Champion", "Eldritch Knight", "Purple Dragon Knight", "Samurai", "Scout", "Sharpshooter"]
-        Subclass :str = random.choice(Subclass)
+        Subclass :str = input("""What's your Fighter's subclass:
+                              Arcane Archer
+                              Battle Master
+                              Brute
+                              Cavalier
+                              Champion
+                              Eldritch Knight
+                              Purple Dragon Knight
+                              Samurai
+                              Scout
+                              Sharpshooter
+                              """)
     HP :int = HP + HitPoints(10)
     ArmourProficiencies.extend(["Light Armour, Medium Armour, Heavy Armour", "Shields"])
     WeaponProficiencies.extend(["Simple Weapons", "Martial Weapons"])
@@ -1008,8 +1082,16 @@ if Class == "Fighter":
     
 if Class == "Monk":
     if Level >= 3:
-        Subclass :list[str]  = ["Way of the Drunken Master", "Way of the Four Elements", "Way of the Kensei", "Way of the Long Death", "Way of the Open Hand", "Way of Shadow", "Way of the Sun Soul", "Way of Tranquility"]
-        Subclass :str = random.choice(Subclass)
+        Subclass :str = input("""What's your Monk's subclass:
+                              Way of the Drunken Master
+                              Way of the Four Elements
+                              Way of the Kensei
+                              Way of the Long Death
+                              Way of the Open Hand
+                              Way of Shadow
+                              Way of the Sun soul
+                              Way of Tranquility
+                              """)
     HP :int = HP + HitPoints(8)
     WeaponProficiencies.extend(["Simple Weapons", "Shortswords"])
     ToolProficiencies.extend([random.choice([random.choice(MusicalInstruments), random.choice(ArtisanTools)])])
@@ -1019,11 +1101,23 @@ if Class == "Monk":
    
 if Class == "Paladin":
     if Level >= 2:
-        FightingStyle = ["Defense", "Dueling", "Great Weapon Fighting", "Protection"]
-        FightingStyle = random.choice(FightingStyle)
+        FightingStyle :str = input("""What's your Paladin's fighting style:
+                          Defense
+                          Dueling
+                          Great Weapon Fighting
+                          Protection
+                          """)
     if Level >= 3:
-        Subclass :list[str]  = ["Oath of the Ancients", "Oath of Conquests", "Oath of the Crown", "Oath of Devotion", "Oath of Redemption", "Oath of Vengeance", "Oathbreaker", "Oath of Treachery"]
-        Subclass :str = random.choice(Subclass)
+        Subclass :str = input("""What's your Paladin's Oath:
+                              Oath of the Ancients
+                              Oath of Conquests
+                              Oath of the Crown 
+                              Oath of Devotion 
+                              Oath of Redemption
+                              Oath of Vengeance
+                              Oathbreaker
+                              Oath of Treachery
+                              """)
     HP :int = HP + HitPoints(10)
     ArmourProficiencies.extend(["Light Armour", "Medium Armour", "Heavy Armour", "Shields"])
     WeaponProficiencies.extend(["Simple Weapons", "Martial Weapons"])
@@ -1036,11 +1130,21 @@ if Class == "Paladin":
     
 if Class == "Ranger":
     if Level >= 2:
-        FightingStyle = ["Archery", "Defense", "Dueling", "Two-Weapon Fighting"]
-        FightingStyle = random.choice(FightingStyle)
+        FightingStyle :str = input("""What's your Ranger's fighting style:
+                              Archery
+                              Defense
+                              Dueling
+                              Two-Weapon Fighting
+                              """)
     if Level >= 3:
-        Subclass :list[str]  = ["Beast Master", "Gloom Stalker", "Horizon Walker", "Hunter", "Monster Slayer", "Primeval Guardian"]
-        Subclass :str = random.choice(Subclass)
+        Subclass :str = input("""What's your Ranger's subrace:
+                              Beast Master
+                              Gloom Stalker
+                              Horizon Walker
+                              Hunter
+                              Monster Slayer
+                              Primeval Guardian
+                              """)
     HP :int = HP + HitPoints(10)
     ArmourProficiencies.extend(["Light Armour", "Medium Armour", "Shields"])
     WeaponProficiencies.extend(["Simple Weapons", "Martial Weapons"])
@@ -1054,8 +1158,15 @@ if Class == "Ranger":
     
 if Class == "Rogue":
     if Level >= 3:
-        Subclass :list[str]  = ["Arcane Trickster", "Assassin", "Inquisitive", "Mastermind", "Scout", "Swashbuckler", "Thief"]
-        Subclass :str = random.choice(Subclass)
+        Subclass :str = input("""What's your Rogue's subclass:
+                              Arcane Trickster
+                              Assassin
+                              Inquisitive
+                              Mastermind
+                              Scout
+                              Swashbuckler
+                              Thief
+                              """)
     HP :int = HP + HitPoints(8)
     ArmourProficiencies.extend(["Light Armour"])
     WeaponProficiencies.extend(["Simple Weapons", "Hand Crossbows", "Longswords", "Rapiers", "Shortswords"])
@@ -1065,8 +1176,18 @@ if Class == "Rogue":
     Equipment.extend([random.choice(["Rapier", "Shortsword"]), random.choice(["Shortbow with 20 Arrows", "Shortsword"]), random.choice(["Burglar's Pack", "Dungeoneer's Pack", "Explorer's Pack"]), "Leather Armour", "Two Daggers", "Thieves's Tools"])
     
 if Class == "Sorcerer":
-    Subclass :list[str]  = ["Divine Soul", "Draconic Bloodline", "Giant Soul", "Pheonix Sorcery", "Pyromancer", "Sea Sorcery", "Shadow Magic", "Stone Soercery", "Storm Sorcery", "Wild Magic"]
-    Subclass :str = random.choice(Subclass)
+    Subclass :str = input("""What's your Sorcerer's subclass:
+                          Divine Soul
+                          Draconic Bloodline
+                          Giant Soul
+                          Pheonix Sorcery
+                          Pyromancer
+                          Sea Sorcery
+                          Shadow Magic
+                          Stone Sorcery
+                          Storm Sorcery
+                          Wild Magic
+                          """)
     HP :int = HP + HitPoints(6)
     WeaponProficiencies.extend(["Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows"])
     SavingThrowProficiencies.extend(["CON", "CHA"])
@@ -1074,11 +1195,22 @@ if Class == "Sorcerer":
     Equipment.extend([random.choice(["Light Crossbow with 20 Bolts", random.choice(SimpleWeapons)]), random.choice(["Component Pouch", "Arcane Focus"]), random.choice(["Dungeoneer's Pack", "Explorer's Pack"]), "Two Daggers"])
     
 if Class == "Warlock":
-    Subclass :list[str]  = ["The Archfey", "The Celestial", "The Fiend", "The Ghost in the Machine", "The Great Old One", "The Hexblade", "The Raven Queen", "The Seeker", "The Undying"]
-    Subclass :str = random.choice(Subclass)
+    Subclass :str = input("""What's your Warlock's subclass:
+                          The Archfey
+                          The Celestial
+                          The Fiend
+                          The Great Old One
+                          The Hexblade
+                          The Raven Queen
+                          The Seeker
+                          The Undying
+                          """)
     if Level >= 3:
-        FightingStyle = ["Pact of the Chain", "Pact of the Blade", "Pact of the Tome"]
-        FightingStyle = random.choice(FightingStyle)
+        FightingStyle :str = input("""What's your Warlock's fighting style:
+                                   Pact of the Chain
+                                   Pact of the Blade
+                                   Pact of the Tome
+                                   """)
     HP :int = HP + HitPoints(8)
     ArmourProficiencies.extend(["Light Armour"])
     WeaponProficiencies.extend(["Simple Weapons"])
@@ -1088,8 +1220,19 @@ if Class == "Warlock":
     
 if Class == "Wizard":
     if Level >= 2:
-        Subclass :list[str]  = ["Artificier", "Bladesinger", "Lore Mastery", "School of Abjuration", "School of Conjuration", "School of Divination", "School of Enchantment", "School of Evocation", "School of Illusion", "School of Invention", "School of Necromancy", "School of Transmutation", "Technomancy", "Theurgy", "War Magic"]
-        Subclass :str = random.choice(Subclass)
+        Subclass :str = input("""What's your Wizard's subclass:
+                              Bladesinger
+                              Lore Mastery
+                              School of Abjuration
+                              School of Conjuration
+                              School of Divination
+                              School of Enchantment 
+                              School of Evocation
+                              School of Illusion
+                              School of Necromancy
+                              School of Transmutation
+                              War Magic
+                              """)
     HP :int = HP + HitPoints(6)
     WeaponProficiencies.extend(["Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows"])
     SavingThrowProficiencies.extend(["INT", "WIS"])
