@@ -24,122 +24,107 @@
 					"label": "Dwarf"
 				},
 				{
-					"line": 284,
-					"column": 0,
-					"label": "Elf"
-				},
-				{
-					"line": 360,
+					"line": 358,
 					"column": 0,
 					"label": "Firebolg"
 				},
 				{
-					"line": 376,
+					"line": 374,
 					"column": 0,
 					"label": "Genasi"
 				},
 				{
-					"line": 424,
-					"column": 0,
+					"line": 422,
+					"column": 3,
 					"label": "Gith"
 				},
 				{
-					"line": 456,
+					"line": 453,
 					"column": 19,
 					"label": "Gnome"
 				},
 				{
-					"line": 488,
+					"line": 484,
 					"column": 20,
 					"label": "Goblin"
 				},
 				{
-					"line": 503,
+					"line": 499,
 					"column": 21,
 					"label": "Goliath"
 				},
 				{
-					"line": 519,
+					"line": 515,
 					"column": 23,
 					"label": "Hobgoblin"
 				},
 				{
-					"line": 535,
+					"line": 531,
 					"column": 22,
 					"label": "Half-Elf"
 				},
 				{
-					"line": 576,
+					"line": 571,
 					"column": 22,
 					"label": "Halfing"
 				},
 				{
-					"line": 609,
+					"line": 603,
 					"column": 0,
 					"label": "Half-Orc"
 				},
 				{
-					"line": 625,
+					"line": 619,
 					"column": 0,
 					"label": "Human"
 				},
 				{
-					"line": 682,
+					"line": 675,
 					"column": 0,
 					"label": "Juiblexian"
 				},
 				{
-					"line": 712,
+					"line": 707,
 					"column": 0,
 					"label": "Kender"
 				},
 				{
-					"line": 730,
+					"line": 725,
 					"column": 3,
 					"label": "Kenku"
 				},
 				{
-					"line": 745,
+					"line": 740,
 					"column": 1,
 					"label": "Kobold"
 				},
 				{
-					"line": 760,
+					"line": 755,
 					"column": 0,
 					"label": "Lizardfolk"
 				},
 				{
-					"line": 778,
-					"column": 1,
-					"label": "Mousefolk"
-				},
-				{
-					"line": 793,
+					"line": 773,
 					"column": 1,
 					"label": "Orc"
 				},
 				{
-					"line": 809,
+					"line": 789,
 					"column": 3,
 					"label": "Tabaxi"
 				},
 				{
-					"line": 825,
-					"column": 5,
-					"label": "Tiefling"
-				},
-				{
-					"line": 882,
+					"line": 874,
 					"column": 5,
 					"label": "Tortle"
 				},
 				{
-					"line": 898,
+					"line": 890,
 					"column": 8,
 					"label": "Triton"
 				},
 				{
-					"line": 915,
+					"line": 907,
 					"column": 3,
 					"label": "Yuan-Ti Pureblood"
 				}
